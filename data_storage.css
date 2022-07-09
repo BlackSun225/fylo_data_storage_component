@@ -1,0 +1,378 @@
+@font-face{
+  font-family: "Raleway Variable";
+  src: url("raleway-variable.ttf") format("TrueType");
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#top, #bottom{
+  background: hsl(228, 56%, 26%);
+}
+@media only screen and (max-width:600px) {
+  body{
+    background: url("images/bg-mobile.png") no-repeat fixed;
+    background-size: cover;
+    padding: 100px 0;
+    font-family: "Raleway Variable";
+  }
+  main{
+    width: 90%;
+    height: auto;
+    background: transparent;
+    margin: 0 auto;
+  }
+  #top, #bottom{
+    width: 100%;
+  }
+  #top{
+    border-radius: 12px 100px 12px 12px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  .iconfile{
+    display: flex;
+    width: 165px;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .iconitem{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #bottom{
+    border-radius: 12px;
+    position: relative;
+    padding: 30px;
+    color: white;
+  }
+  #bottom p{
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  #bottom p span{
+    font-weight: 700;
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+  #range{
+    width: 95%;
+    height: 19px;
+    border-radius: 10px;
+    background: hsla(229, 57%, 11%, 50%);
+    margin: 20px auto;
+    padding: 3px;
+    position: relative;
+  }
+  #indicator{
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 73%;
+    height: 13px;
+    border-radius: 7.5px;
+    position: relative;
+  }
+  #indicator #circle{
+    width: 9px;
+    height: 9px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    opacity: 0.9;
+  }
+  #storage{
+    position: relative;
+    top: -10px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #storage span{
+    font-size: 0.75em;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  #remainstorage{
+    width: 55%;
+    background: white;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    border-radius: 8px;
+    padding: 12px 0;
+    position: absolute;
+    left: 22.5%;
+    bottom: 0;
+    margin-bottom: -32px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  #remainstorage span{
+    font-family: "Raleway","Raleway Variable";
+    font-size: 40px;
+    color: hsl(229, 57%, 11%);
+    margin-right: 10px;
+    font-weight: 800;
+  }
+}
+@media only screen and (min-width:601px) {
+  body{
+    background: hsl(243, 100%, 93%);
+    font-family: "Raleway Variable";
+  }
+  main{
+    width: 500px;
+    background: url("images/bg-mobile.png") no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 100px 30px;
+  }
+  #top, #bottom{
+    width: 100%;
+  }
+  #top{
+    border-radius: 12px 100px 12px 12px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  .iconfile{
+    display: flex;
+    width: 165px;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .iconitem{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #bottom{
+    border-radius: 12px;
+    position: relative;
+    padding: 30px;
+    color: white;
+  }
+  #bottom p{
+    text-align: center;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  #bottom p span{
+    font-weight: 700;
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+  #range{
+    width: 95%;
+    height: 19px;
+    border-radius: 10px;
+    background: hsla(229, 57%, 11%, 50%);
+    margin: 20px auto;
+    padding: 3px;
+    position: relative;
+  }
+  #indicator{
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 73%;
+    height: 13px;
+    border-radius: 7.5px;
+    position: relative;
+  }
+  #indicator #circle{
+    width: 9px;
+    height: 9px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    opacity: 0.9;
+  }
+  #storage{
+    position: relative;
+    top: -10px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #storage span{
+    font-size: 0.75em;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  #remainstorage{
+    width: 55%;
+    background: white;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    border-radius: 8px;
+    padding: 12px 0;
+    position: absolute;
+    left: 22.5%;
+    bottom: 0;
+    margin-bottom: -32px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  #remainstorage span{
+    font-family: "Raleway","Raleway Variable";
+    font-size: 40px;
+    color: hsl(229, 57%, 11%);
+    margin-right: 10px;
+    font-weight: 800;
+  }
+}
+@media only screen and (min-width:901px) {
+  body{
+    background: hsl(229, 57%, 11%) url("images/bg-desktop.png") no-repeat fixed;
+    background-size: contain;
+    background-position: bottom;
+  }
+  main{
+    width: 900px;
+    background: transparent;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #top{
+    max-width: 37.5%;
+    border-radius: 12px 100px 12px 12px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+  .iconfile{
+    display: flex;
+    width: 165px;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .iconitem{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background: hsl(229, 57%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #bottom{
+    max-width: 60%;
+    border-radius: 12px;
+    position: relative;
+    top: 15px;
+    padding: 30px;
+    color: white;
+  }
+  #bottom p{
+    text-align: left;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+  #bottom p span{
+    font-weight: 700;
+    opacity: 1;
+    letter-spacing: 2px;
+  }
+  #range{
+    width: 95%;
+    height: 19px;
+    border-radius: 10px;
+    background: hsla(229, 57%, 11%, 50%);
+    margin: 20px auto;
+    padding: 3px;
+    position: relative;
+  }
+  #indicator{
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    width: 73%;
+    height: 13px;
+    border-radius: 7.5px;
+    position: relative;
+  }
+  #indicator #circle{
+    width: 9px;
+    height: 9px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    opacity: 0.9;
+  }
+  #storage{
+    position: relative;
+    top: -10px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  #storage span{
+    font-size: 0.75em;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  #remainstorage{
+    width: 35%;
+    height: 60px;
+    background: white;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    border-radius: 8px;
+    padding: 10px;
+    position: absolute;
+    left: 57.5%;
+    top: 0;
+    margin-top: -30px;
+  }
+  #remainstorage::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -9px;
+  }
+  #remainstorage span{
+    font-family: "Raleway","Raleway Variable";
+    font-size: 40px;
+    color: hsl(229, 57%, 11%);
+    margin-right: 10px;
+    margin-top: 0;
+    font-weight: 800;
+  }
+}
